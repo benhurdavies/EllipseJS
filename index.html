@@ -13,6 +13,7 @@
         var map = null;
         var indiaData = [20.5937, 78.9629];
         var chinaData = [35.8617, 104.1954];
+        var usa = [40.7128,-74.0059];
 
         function loadMap() {
             map = new ol.Map({
@@ -33,7 +34,7 @@
             var iconFeatures = [];
 
             var iconFeature = new ol.Feature({
-                geometry: new ol.geom.Point(ol.proj.transform([indiaData[1], indiaData[0]], 'EPSG:4326',
+                geometry: new ol.geom.Point(ol.proj.transform([usa[1], usa[0]], 'EPSG:4326',
                     'EPSG:3857')),
                 name: 'india',
                 population: 4000,
@@ -72,7 +73,7 @@
 
         function addLine(adjustProps) {
             debugger;
-            var line = Ellipse([indiaData[1],indiaData[0]],[chinaData[1],chinaData[0]],0);
+            var line = Ellipse([usa[1],usa[0]],[chinaData[1],chinaData[0]],0);
             var points = line;
 
             let vectorSource = new ol.source.Vector({ wrapX: false });
