@@ -77,7 +77,6 @@ LineString.prototype.move_to = function (coord) {
 
 //https://www.uwgb.edu/dutchs/Geometry/HTMLCanvas/ObliqueEllipses5.HTM
 function Ellipse(_start, _end, adjust) {
-    debugger;
     var start = new Coord(_start[0], _start[1]);
     var end = new Coord(_end[0], _end[1]);
     var mid = Coord.midPoint(start, end);
