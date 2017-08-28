@@ -87,7 +87,7 @@ function Ellipse(_start, _end, adjust) {
     var _rotation = Math.atan2(dy, dx);
 
     var radiusX =Coord.distanceRadian(start, end) / 2;// Semi-major axis length - km
-    var radiusY = .3;   // Semi-minor axis length -km 
+    var radiusY = adjust;   // Semi-minor axis length -km 
     var xCent = mid.x;
     var yCent = mid.y;
     var rotation =_rotation;// start.getAngle(end)+180;
